@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,17 +10,19 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
+                <th>ID</th>
                 <th>Name</th>
                 <th>Price</th>
             </tr>
         </thead>
         <tbody>
-            <c:forEach items="${foods}" var="food">
+            <c:forEach items="${foodItems}" var="food">
                 <tr>
-${food.name}</td>
+                    <td scope="row">${food.foodId}</td>
+                    <td>${food.name}</td>
                     <td>${food.price}</td>
                 </tr>
+                
             </c:forEach>
         </tbody>
     </table>
